@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North American Modular | Custom Commercial Container Solutions</title>
-    <meta name="description" content="Factory-direct container sourcing. Custom commercial container solutions delivered to spec.">
+    <title>North American Modular | Commercial Container Solutions</title>
+    <meta name="description" content="Factory-direct container sourcing for commercial and industrial applications. Custom container systems delivered to specification across North America.">
+    <meta name="keywords" content="shipping containers, modular buildings, container solutions, commercial containers, custom containers, container office, modular construction, container distribution">
+    <meta name="author" content="North American Modular">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://northamericanmodular.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://northamericanmodular.com/">
+    <meta property="og:title" content="North American Modular | Commercial Container Solutions">
+    <meta property="og:description" content="Factory-direct container sourcing for commercial and industrial applications.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="North American Modular | Commercial Container Solutions">
+    <meta name="twitter:description" content="Factory-direct container sourcing for commercial and industrial applications.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "North American Modular",
+        "description": "Factory-direct container sourcing for commercial and industrial applications",
+        "url": "https://northamericanmodular.com",
+        "email": "contact@northamericanmodular.com"
+    }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,11 +43,27 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --accent: #1a1a1a;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #ffffff;
-            color: #1a1a1a;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--black);
             line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
         /* Navigation */
@@ -28,42 +72,68 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 24px 48px;
+            padding: 32px 64px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
         .logo svg {
-            height: 44px;
+            height: 48px;
             width: auto;
         }
 
         .logo svg text {
-            fill: #ffffff;
+            fill: var(--white);
         }
 
         .logo svg g {
-            stroke: #ffffff;
+            stroke: var(--white);
         }
 
-        .nav-contact {
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .nav-links a {
             font-size: 14px;
-            color: #ffffff;
-            text-decoration: none;
             font-weight: 500;
+            color: var(--white);
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s;
         }
 
-        .nav-contact:hover {
-            text-decoration: underline;
+        .nav-links a:hover {
+            opacity: 0.7;
         }
 
-        /* Hero with Video */
+        .nav-cta {
+            padding: 12px 24px;
+            background: var(--white);
+            color: var(--black) !important;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9 !important;
+        }
+
+        /* Hero */
         .hero {
             position: relative;
             height: 100vh;
-            min-height: 600px;
+            min-height: 700px;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -85,139 +155,319 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
             z-index: 2;
         }
 
         .hero-content {
             position: relative;
             z-index: 3;
-            padding: 0 48px;
-            max-width: 800px;
+            padding: 0 64px;
+            max-width: 720px;
         }
 
-        .hero-label {
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+        .hero-eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 24px;
+            color: var(--gray-400);
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(36px, 5vw, 56px);
-            font-weight: 600;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-            color: #ffffff;
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 700;
+            line-height: 1.08;
+            margin-bottom: 28px;
+            letter-spacing: -0.03em;
+            color: var(--white);
         }
 
-        .hero p {
+        .hero-text {
             font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 550px;
+            color: rgba(255,255,255,0.85);
+            max-width: 520px;
             margin-bottom: 40px;
+            line-height: 1.7;
         }
 
-        .cta-button {
+        .btn-primary {
             display: inline-block;
-            padding: 16px 32px;
-            background: #ffffff;
-            color: #1a1a1a;
-            text-decoration: none;
+            padding: 18px 36px;
+            background: var(--white);
+            color: var(--black);
             font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: background 0.2s, transform 0.2s;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .cta-button:hover {
-            background: #f0f0f0;
+        .btn-primary:hover {
             transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
         }
 
-        /* Services */
-        .services {
-            padding: 100px 48px;
-            background: #ffffff;
+        /* Value Props */
+        .value-section {
+            padding: 120px 64px;
+            background: var(--gray-100);
         }
 
-        .services-label {
+        .value-header {
+            max-width: 600px;
+            margin-bottom: 80px;
+        }
+
+        .section-eyebrow {
             font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #666;
-            margin-bottom: 48px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+
+        .value-header h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .value-header p {
+            font-size: 17px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        .value-item {
+            padding: 40px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+        }
+
+        .value-number {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-400);
+            margin-bottom: 24px;
+        }
+
+        .value-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .value-item p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Services Preview */
+        .services-section {
+            padding: 120px 64px;
+        }
+
+        .services-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 64px;
+        }
+
+        .services-header h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .services-header a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-600);
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 4px;
+            transition: border-color 0.2s;
+        }
+
+        .services-header a:hover {
+            border-color: var(--black);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 48px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
 
-        .service-item h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
+        .service-card {
+            padding: 48px 40px;
+            background: var(--gray-100);
+            transition: background 0.2s;
         }
 
-        .service-item p {
+        .service-card:hover {
+            background: var(--gray-200);
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
             font-size: 15px;
-            color: #666;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .service-link {
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-link::after {
+            content: '→';
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover .service-link::after {
+            transform: translateX(4px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 64px;
+            background: var(--black);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 17px;
+            color: var(--gray-400);
+            max-width: 500px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .btn-white {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--white);
+            color: var(--black);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
         }
 
         /* Footer */
         footer {
-            padding: 48px;
-            border-top: 1px solid #e5e5e5;
+            padding: 64px;
+            border-top: 1px solid var(--gray-200);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 24px;
         }
 
         .footer-left {
             font-size: 13px;
-            color: #666;
+            color: var(--gray-600);
         }
 
-        .footer-right a {
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links a {
             font-size: 13px;
-            color: #1a1a1a;
-            text-decoration: none;
+            color: var(--gray-600);
+            transition: color 0.2s;
         }
 
-        .footer-right a:hover {
-            text-decoration: underline;
+        .footer-links a:hover {
+            color: var(--black);
         }
 
         /* Mobile */
+        @media (max-width: 1024px) {
+            .value-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             nav {
-                padding: 20px 24px;
+                padding: 24px;
             }
 
-            .logo svg {
-                height: 36px;
+            .nav-links {
+                display: none;
             }
 
             .hero-content {
                 padding: 0 24px;
             }
 
-            .services {
-                padding: 60px 24px;
+            .value-section,
+            .services-section,
+            .cta-section {
+                padding: 80px 24px;
+            }
+
+            .value-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
             }
 
             footer {
-                padding: 32px 24px;
+                padding: 40px 24px;
                 flex-direction: column;
+                gap: 24px;
                 text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
             }
         }
     </style>
@@ -225,26 +475,25 @@
 <body>
     <nav>
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
-                <!-- Stacked modular containers icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 55" width="280" height="55">
                 <g stroke="#1a1a1a" stroke-width="1.5" fill="none">
-                    <!-- Top container -->
-                    <rect x="12" y="8" width="36" height="16" />
-                    <line x1="24" y1="8" x2="24" y2="24" />
-                    <line x1="36" y1="8" x2="36" y2="24" />
-                    <!-- Bottom left container -->
-                    <rect x="4" y="26" width="24" height="18" />
-                    <line x1="16" y1="26" x2="16" y2="44" />
-                    <!-- Bottom right container -->
-                    <rect x="30" y="26" width="24" height="18" />
-                    <line x1="42" y1="26" x2="42" y2="44" />
+                    <rect x="12" y="6" width="36" height="16" />
+                    <line x1="24" y1="6" x2="24" y2="22" />
+                    <line x1="36" y1="6" x2="36" y2="22" />
+                    <rect x="4" y="24" width="24" height="18" />
+                    <line x1="16" y1="24" x2="16" y2="42" />
+                    <rect x="30" y="24" width="24" height="18" />
+                    <line x1="42" y1="24" x2="42" y2="42" />
                 </g>
-                <!-- Text -->
-                <text x="66" y="27" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5" fill="#1a1a1a">NORTH AMERICAN</text>
-                <text x="66" y="44" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" letter-spacing="0.5" fill="#1a1a1a">MODULAR</text>
+                <text x="66" y="25" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#1a1a1a">NORTH AMERICAN</text>
+                <text x="66" y="42" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#1a1a1a">MODULAR</text>
             </svg>
         </div>
-        <a href="mailto:contact@northamericanmodular.com" class="nav-contact">Contact</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+        </div>
     </nav>
 
     <section class="hero">
@@ -253,36 +502,76 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-label">Factory-Direct Container Sourcing</p>
-            <h1>Custom Commercial Container Solutions</h1>
-            <p>We source, customize, and deliver container systems to spec. Factory-direct pricing. No middlemen, no bullshit.</p>
-            <a href="mailto:contact@northamericanmodular.com" class="cta-button">Get in Touch</a>
+            <p class="hero-eyebrow">Commercial Container Distribution</p>
+            <h1>Container Systems, Sourced Direct</h1>
+            <p class="hero-text">We source container systems for commercial and industrial applications. Factory-direct pricing from our network of suppliers and fabricators. One point of contact.</p>
+            <a href="contact.html" class="btn-primary">Request a Quote</a>
         </div>
     </section>
 
-    <section class="services">
-        <p class="services-label">What We Build</p>
-        <div class="services-grid">
-            <div class="service-item">
-                <h3>Container Systems</h3>
-                <p>Factory-direct container sourcing through our NAM Container Systems division. Residential, commercial, and industrial applications.</p>
+    <section class="value-section">
+        <div class="value-header">
+            <p class="section-eyebrow">Why North American Modular</p>
+            <h2>Streamlined sourcing for container-based projects</h2>
+            <p>We simplify container procurement by managing vendor relationships and quality verification under one roof. You get the units you need at factory-direct pricing.</p>
+        </div>
+        <div class="value-grid">
+            <div class="value-item">
+                <p class="value-number">01</p>
+                <h3>Factory-Direct Sourcing</h3>
+                <p>We maintain direct relationships with container suppliers and fabricators, cutting out intermediaries and providing competitive pricing on standard and custom units.</p>
             </div>
-            <div class="service-item">
-                <h3>Commercial Builds</h3>
-                <p>Large-scale modular solutions for businesses. Offices, retail, hospitality, and mixed-use developments.</p>
+            <div class="value-item">
+                <p class="value-number">02</p>
+                <h3>Single Point of Contact</h3>
+                <p>One team manages your order from specification through purchase. No coordination gaps, no chasing vendors, no surprises.</p>
             </div>
-            <div class="service-item">
-                <h3>Turnkey Delivery</h3>
-                <p>From sourcing to site. We handle customization, logistics, permitting coordination, and delivery.</p>
+            <div class="value-item">
+                <p class="value-number">03</p>
+                <h3>Commercial Focus</h3>
+                <p>We specialize in commercial and industrial applications. Bulk orders, custom specifications, and project-based sourcing.</p>
             </div>
         </div>
+    </section>
+
+    <section class="services-section">
+        <div class="services-header">
+            <h2>Our Services</h2>
+            <a href="services.html">View All Services</a>
+        </div>
+        <div class="services-grid">
+            <a href="services.html" class="service-card">
+                <h3>Standard Containers</h3>
+                <p>New and used containers sourced to specification. Standard sizes, high-cube variants, and specialty units available.</p>
+                <span class="service-link">Learn More</span>
+            </a>
+            <a href="services.html" class="service-card">
+                <h3>Modified Units</h3>
+                <p>Pre-configured containers for commercial use sourced from certified fabricators. Offices, retail, hospitality, and industrial applications.</p>
+                <span class="service-link">Learn More</span>
+            </a>
+            <a href="services.html" class="service-card">
+                <h3>Bulk & Project Orders</h3>
+                <p>Volume pricing for multi-unit purchases. Dedicated sourcing for large-scale projects and ongoing supply needs.</p>
+                <span class="service-link">Learn More</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Tell us about your requirements. We'll provide specifications, pricing, and delivery timeline within 48 hours.</p>
+        <a href="contact.html" class="btn-white">Get in Touch</a>
     </section>
 
     <footer>
         <div class="footer-left">
-            © 2025 North American Modular
+            © 2025 North American Modular LLC. All rights reserved.
         </div>
-        <div class="footer-right">
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
             <a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a>
         </div>
     </footer>

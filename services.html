@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | North American Modular</title>
+    <meta name="description" content="Container sourcing, commercial solutions, and turnkey delivery services. Factory-direct pricing with nationwide logistics.">
+    <link rel="canonical" href="https://northamericanmodular.com/services">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 32px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .logo svg {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--black);
+        }
+
+        .nav-cta {
+            padding: 12px 24px;
+            background: var(--black);
+            color: var(--white) !important;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 100px 64px 80px;
+            max-width: 800px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Service Blocks */
+        .service-block {
+            padding: 80px 64px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .service-block:nth-child(odd) {
+            background: var(--gray-100);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1200px;
+        }
+
+        .service-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .service-content p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            margin-top: 32px;
+        }
+
+        .service-list h4 {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 16px;
+        }
+
+        .service-list ul {
+            list-style: none;
+        }
+
+        .service-list li {
+            font-size: 15px;
+            color: var(--gray-600);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .service-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--black);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .service-details {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-block:nth-child(odd) .service-details {
+            background: var(--white);
+        }
+
+        .detail-item {
+            margin-bottom: 32px;
+        }
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            font-size: 15px;
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 100px 64px;
+            background: var(--black);
+        }
+
+        .process-header {
+            max-width: 600px;
+            margin-bottom: 64px;
+        }
+
+        .process-header h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .process-header p {
+            font-size: 17px;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .process-step {
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .step-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.2);
+            margin-bottom: 24px;
+        }
+
+        .process-step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 100px 64px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 17px;
+            color: var(--gray-600);
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+
+        .btn-black {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s;
+        }
+
+        .btn-black:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 64px;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--black);
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-header,
+            .service-block,
+            .process-section,
+            .cta-section {
+                padding: 60px 24px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                padding: 40px 24px;
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 55" width="280" height="55">
+                <g stroke="#0a0a0a" stroke-width="1.5" fill="none">
+                    <rect x="12" y="6" width="36" height="16" />
+                    <line x1="24" y1="6" x2="24" y2="22" />
+                    <line x1="36" y1="6" x2="36" y2="22" />
+                    <rect x="4" y="24" width="24" height="18" />
+                    <line x1="16" y1="24" x2="16" y2="42" />
+                    <rect x="30" y="24" width="24" height="18" />
+                    <line x1="42" y1="24" x2="42" y2="42" />
+                </g>
+                <text x="66" y="25" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#0a0a0a">NORTH AMERICAN</text>
+                <text x="66" y="42" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#0a0a0a">MODULAR</text>
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Services built for commercial container projects</h1>
+        <p>From single-unit orders to multi-container deployments, we manage sourcing and delivery with a focus on timeline and specification accuracy.</p>
+    </section>
+
+    <section class="service-block">
+        <div class="service-grid">
+            <div class="service-content">
+                <h2>Container Sourcing</h2>
+                <p>We source shipping containers directly from manufacturers and vetted suppliers, providing access to new, used, and certified units at competitive pricing.</p>
+                <p>Our sourcing team handles specification matching, quality verification, and vendor coordination—ensuring you receive exactly what your project requires.</p>
+                <div class="service-list">
+                    <h4>Available Units</h4>
+                    <ul>
+                        <li>20' and 40' standard containers</li>
+                        <li>High-cube variants (9'6" height)</li>
+                        <li>Open-top and flat-rack configurations</li>
+                        <li>Refrigerated units</li>
+                        <li>One-trip (new) containers</li>
+                        <li>Certified used containers (wind/watertight)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-details">
+                <div class="detail-item">
+                    <p class="detail-label">Lead Time</p>
+                    <p class="detail-value">2–4 weeks for standard units. Custom specifications may require additional time.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Minimum Order</p>
+                    <p class="detail-value">No minimum. We handle single-unit orders through bulk purchases.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Quality Assurance</p>
+                    <p class="detail-value">All units inspected prior to shipment. Certification documentation provided.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Pricing</p>
+                    <p class="detail-value">Factory-direct pricing. Quotes provided within 48–72 hours of specification review.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-block">
+        <div class="service-grid">
+            <div class="service-content">
+                <h2>Modified Units</h2>
+                <p>We source pre-modified containers from certified fabrication partners for commercial applications. Units arrive ready for their intended use—no assembly required on your end.</p>
+                <p>From site offices and retail spaces to industrial enclosures and hospitality units, we connect you with the right product from our network of trusted fabricators.</p>
+                <div class="service-list">
+                    <h4>Applications</h4>
+                    <ul>
+                        <li>Site offices and administrative space</li>
+                        <li>Retail and pop-up installations</li>
+                        <li>Equipment enclosures</li>
+                        <li>Storage and warehousing</li>
+                        <li>Hospitality and food service</li>
+                        <li>Industrial and utility applications</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-details">
+                <div class="detail-item">
+                    <p class="detail-label">Available Configurations</p>
+                    <p class="detail-value">Doors, windows, HVAC, electrical, insulation, interior finishing, custom paint, and structural modifications—all completed by certified fabricators.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Engineering</p>
+                    <p class="detail-value">Structural engineering and stamped drawings available from our fabrication partners for permitting requirements.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Compliance</p>
+                    <p class="detail-value">Units sourced from fabricators who build to local building codes and ADA requirements where applicable.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Timeline</p>
+                    <p class="detail-value">4–8 weeks depending on unit specifications and current fabricator capacity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-block">
+        <div class="service-grid">
+            <div class="service-content">
+                <h2>Bulk & Project Orders</h2>
+                <p>We provide volume pricing for multi-unit purchases and dedicated sourcing for large-scale projects.</p>
+                <p>Whether you're outfitting a construction site, launching a modular development, or building inventory, we can source the quantities you need at competitive pricing.</p>
+                <div class="service-list">
+                    <h4>Bulk Capabilities</h4>
+                    <ul>
+                        <li>Volume pricing on multi-unit orders</li>
+                        <li>Mixed container specifications</li>
+                        <li>Phased ordering for project timelines</li>
+                        <li>Ongoing supply agreements</li>
+                        <li>Priority sourcing for repeat customers</li>
+                        <li>Custom specification matching</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-details">
+                <div class="detail-item">
+                    <p class="detail-label">Minimum Order</p>
+                    <p class="detail-value">No minimum required. Single units to bulk orders—same attention to detail.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Volume Pricing</p>
+                    <p class="detail-value">Tiered pricing available for orders of 5+ units. Contact us for project-specific quotes.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Lead Time</p>
+                    <p class="detail-value">Varies by unit type and quantity. We provide realistic timelines upfront.</p>
+                </div>
+                <div class="detail-item">
+                    <p class="detail-label">Delivery Note</p>
+                    <p class="detail-value">We source and sell containers. Buyer arranges transportation, or we can recommend carriers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="process-header">
+            <h2>How we work</h2>
+            <p>A straightforward process designed to get your project moving efficiently.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <p class="step-number">01</p>
+                <h3>Consultation</h3>
+                <p>We discuss your requirements—container type, specifications, quantity, and timeline.</p>
+            </div>
+            <div class="process-step">
+                <p class="step-number">02</p>
+                <h3>Quote</h3>
+                <p>We provide pricing, lead times, and supplier options within 48 hours.</p>
+            </div>
+            <div class="process-step">
+                <p class="step-number">03</p>
+                <h3>Sourcing</h3>
+                <p>We source your units from our network and verify quality before release.</p>
+            </div>
+            <div class="process-step">
+                <p class="step-number">04</p>
+                <h3>Pickup</h3>
+                <p>You arrange transportation, or we can recommend carriers in your area.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Let's discuss your project</h2>
+        <p>Tell us what you're working on. We'll provide options, pricing, and a realistic timeline.</p>
+        <a href="contact.html" class="btn-black">Request a Quote</a>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            © 2025 North American Modular LLC. All rights reserved.
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>

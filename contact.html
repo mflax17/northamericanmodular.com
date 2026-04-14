@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | North American Modular</title>
+    <meta name="description" content="Contact North American Modular for container sourcing, commercial solutions, and delivery quotes. Based in Austin, Texas.">
+    <link rel="canonical" href="https://northamericanmodular.com/contact">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 32px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .logo svg {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--black);
+        }
+
+        .nav-cta {
+            padding: 12px 24px;
+            background: var(--black);
+            color: var(--white) !important;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 100px 64px 80px;
+            max-width: 700px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Contact Content */
+        .contact-section {
+            padding: 0 64px 100px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1100px;
+        }
+
+        /* Contact Info */
+        .contact-info h2 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+        }
+
+        .info-block {
+            margin-bottom: 40px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 12px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: var(--black);
+            line-height: 1.7;
+        }
+
+        .info-value a {
+            border-bottom: 1px solid var(--gray-200);
+            transition: border-color 0.2s;
+        }
+
+        .info-value a:hover {
+            border-color: var(--black);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--gray-100);
+            padding: 48px;
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: inherit;
+            font-size: 15px;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--black);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Response Time */
+        .response-note {
+            margin-top: 24px;
+            padding: 20px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+        }
+
+        .response-note p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .response-note strong {
+            color: var(--black);
+        }
+
+        /* Footer */
+        footer {
+            padding: 64px;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--black);
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-header {
+                padding: 60px 24px;
+            }
+
+            .contact-section {
+                padding: 0 24px 60px;
+            }
+
+            .contact-form {
+                padding: 32px 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                padding: 40px 24px;
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 55" width="280" height="55">
+                <g stroke="#0a0a0a" stroke-width="1.5" fill="none">
+                    <rect x="12" y="6" width="36" height="16" />
+                    <line x1="24" y1="6" x2="24" y2="22" />
+                    <line x1="36" y1="6" x2="36" y2="22" />
+                    <rect x="4" y="24" width="24" height="18" />
+                    <line x1="16" y1="24" x2="16" y2="42" />
+                    <rect x="30" y="24" width="24" height="18" />
+                    <line x1="42" y1="24" x2="42" y2="42" />
+                </g>
+                <text x="66" y="25" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#0a0a0a">NORTH AMERICAN</text>
+                <text x="66" y="42" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#0a0a0a">MODULAR</text>
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="nav-cta active">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Get in touch</h1>
+        <p>Tell us about your project. We'll respond with specifications, pricing, and delivery options within 48 hours.</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                
+                <div class="info-block">
+                    <p class="info-label">Email</p>
+                    <p class="info-value">
+                        <a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a>
+                    </p>
+                </div>
+
+                <div class="info-block">
+                    <p class="info-label">Location</p>
+                    <p class="info-value">
+                        Austin, Texas<br>
+                        United States
+                    </p>
+                </div>
+
+                <div class="info-block">
+                    <p class="info-label">Hours</p>
+                    <p class="info-value">
+                        Monday – Friday<br>
+                        8:00 AM – 5:00 PM CT
+                    </p>
+                </div>
+
+                <div class="info-block">
+                    <p class="info-label">Delivery</p>
+                    <p class="info-value">
+                        Buyer arranges transportation<br>
+                        We can recommend carriers
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Request a Quote</h2>
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type">Project Type</label>
+                        <select id="project-type" name="project-type">
+                            <option value="">Select an option</option>
+                            <option value="standard-containers">Standard Containers</option>
+                            <option value="modified-units">Modified Units</option>
+                            <option value="bulk-order">Bulk / Project Order</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project: container type, quantity, specifications needed, delivery location, and timeline."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Request</button>
+                </form>
+
+                <div class="response-note">
+                    <p><strong>Response time:</strong> We review all inquiries within one business day and provide detailed quotes within 48–72 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            © 2025 North American Modular LLC. All rights reserved.
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
