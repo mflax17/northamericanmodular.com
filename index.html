@@ -3,577 +3,409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North American Modular | Commercial Container Solutions</title>
-    <meta name="description" content="Factory-direct container sourcing for commercial and industrial applications. Custom container systems delivered to specification across North America.">
-    <meta name="keywords" content="shipping containers, modular buildings, container solutions, commercial containers, custom containers, container office, modular construction, container distribution">
-    <meta name="author" content="North American Modular">
+    <title>North American Modular | Design-Build Modular for Defense, Data Centers & Infrastructure</title>
+    <meta name="description" content="Custom modular structures designed, coordinated, and delivered for defense, data centers, and critical infrastructure. Built through a vetted fabrication network and backed by a 5-year structural warranty.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://northamericanmodular.com/">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://northamericanmodular.com/">
-    <meta property="og:title" content="North American Modular | Commercial Container Solutions">
-    <meta property="og:description" content="Factory-direct container sourcing for commercial and industrial applications.">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="North American Modular | Commercial Container Solutions">
-    <meta name="twitter:description" content="Factory-direct container sourcing for commercial and industrial applications.">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "North American Modular",
-        "description": "Factory-direct container sourcing for commercial and industrial applications",
-        "url": "https://northamericanmodular.com",
-        "email": "contact@northamericanmodular.com"
-    }
-    </script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --black: #0a0a0a;
-            --white: #ffffff;
-            --gray-100: #f5f5f5;
-            --gray-200: #e5e5e5;
-            --gray-400: #a3a3a3;
-            --gray-600: #525252;
-            --accent: #1a1a1a;
+            --black: #0a0a0a; --ink: #14161a; --white: #ffffff;
+            --gray-100: #f5f5f5; --gray-200: #e5e5e5; --gray-300: #d4d4d4;
+            --gray-400: #a3a3a3; --gray-600: #525252; --gray-700: #3a3a3a;
+            --accent: #e0531f;
+            --steel-a: #20242b; --steel-b: #2e333c;
         }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        .mono { font-family: 'DM Mono', monospace; }
 
-        body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--white);
-            color: var(--black);
-            line-height: 1.6;
-            font-size: 16px;
-        }
+        /* ---- PHOTO PLACEHOLDER (swap for <img>) ---- */
+        .ph { position: relative; background: linear-gradient(135deg, var(--steel-a), var(--steel-b)); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .ph::after { content: attr(data-label); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-align: center; padding: 16px; line-height: 1.7; }
+        .ph::before { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(255,255,255,0.12); pointer-events: none; }
+        .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        /* ---- NAV ---- */
+        nav { position: fixed; top: 0; left: 0; right: 0; padding: 28px 64px; display: flex; justify-content: space-between; align-items: center; z-index: 100; transition: padding 0.3s ease, background 0.3s ease, border-color 0.3s ease; border-bottom: 1px solid transparent; }
+        nav.scrolled { padding: 16px 64px; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom-color: rgba(255,255,255,0.08); }
+        .logo svg { height: 46px; width: auto; transition: height 0.3s ease; }
+        nav.scrolled .logo svg { height: 38px; }
+        .logo svg text { fill: var(--white); }
+        .logo svg g { stroke: var(--white); }
+        .nav-links { display: flex; gap: 44px; align-items: center; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: var(--white); letter-spacing: 0.02em; transition: opacity 0.2s; }
+        .nav-links a:hover { opacity: 0.65; }
+        .nav-cta { padding: 11px 22px; background: var(--accent); color: var(--white) !important; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; }
+        .nav-cta:hover { opacity: 1 !important; filter: brightness(1.08); }
 
-        /* Navigation */
-        nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 32px 64px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
+        /* ---- HERO ---- */
+        .hero { position: relative; height: 100vh; min-height: 720px; display: flex; align-items: flex-end; overflow: hidden; }
+        .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 45%, rgba(0,0,0,0.45) 100%); z-index: 2; }
+        .hero-content { position: relative; z-index: 3; padding: 0 64px 88px; max-width: 1100px; }
+        .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 12.5px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px; display: flex; align-items: center; gap: 12px; }
+        .hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+        .hero h1 { font-size: clamp(44px, 6.2vw, 86px); font-weight: 700; line-height: 1.02; margin-bottom: 26px; letter-spacing: -0.035em; color: var(--white); max-width: 16ch; }
+        .hero-text { font-size: clamp(17px, 1.5vw, 20px); color: rgba(255,255,255,0.82); max-width: 600px; margin-bottom: 36px; line-height: 1.65; }
+        .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-primary { display: inline-block; padding: 17px 34px; background: var(--white); color: var(--black); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 34px rgba(0,0,0,0.3); }
+        .btn-outline { display: inline-block; padding: 17px 34px; background: rgba(255,255,255,0.06); color: var(--white); border: 1px solid rgba(255,255,255,0.45); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; transition: border-color 0.2s, background 0.2s; }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.14); }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+        /* ---- WARRANTY BAR ---- */
+        .warranty-bar { background: var(--black); color: var(--white); padding: 30px 64px; display: flex; align-items: center; justify-content: center; gap: 44px; flex-wrap: wrap; text-align: center; }
+        .wb-item { display: flex; align-items: baseline; gap: 12px; }
+        .wb-num { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+        .wb-label { font-size: 14px; color: var(--gray-400); }
+        .wb-sep { width: 1px; height: 34px; background: rgba(255,255,255,0.18); }
+        .wb-note { font-size: 13px; color: var(--gray-400); }
+        .wb-note strong { color: var(--white); font-weight: 600; }
 
-        .logo svg {
-            height: 48px;
-            width: auto;
-        }
+        /* ---- STATEMENT BAND (full-bleed photo) ---- */
+        .band { position: relative; min-height: 78vh; display: flex; align-items: center; overflow: hidden; background: var(--ink); }
+        .band .ph { position: absolute; inset: 0; }
+        .band-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.55) 55%, rgba(10,10,10,0.3) 100%); z-index: 2; }
+        .band-content { position: relative; z-index: 3; padding: 0 64px; max-width: 1180px; margin: 0 auto; width: 100%; }
+        .band-content .k { font-family: 'DM Mono', monospace; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px; }
+        .band-content h2 { font-size: clamp(34px, 4.6vw, 60px); font-weight: 700; color: var(--white); letter-spacing: -0.03em; line-height: 1.06; max-width: 18ch; margin-bottom: 24px; }
+        .band-content p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 52ch; line-height: 1.7; }
 
-        .logo svg text {
-            fill: var(--white);
-        }
+        /* ---- SECTION SHELL ---- */
+        .section { padding: 110px 64px; }
+        .wrap { max-width: 1180px; margin: 0 auto; }
+        .sec-eyebrow { font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+        .sec-head { max-width: 680px; margin-bottom: 64px; }
+        .sec-head h2 { font-size: clamp(32px, 4vw, 46px); font-weight: 700; line-height: 1.12; letter-spacing: -0.025em; margin-bottom: 18px; }
+        .sec-head p { font-size: 17px; color: var(--gray-600); line-height: 1.7; }
 
-        .logo svg g {
-            stroke: var(--white);
-        }
+        /* ---- VALUE PROPS ---- */
+        .value-section { background: var(--gray-100); }
+        .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .value-item { padding: 40px; background: var(--white); border: 1px solid var(--gray-200); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .value-item:hover { transform: translateY(-4px); box-shadow: 0 18px 50px rgba(0,0,0,0.08); }
+        .value-num { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; color: var(--accent); margin-bottom: 26px; }
+        .value-item h3 { font-size: 21px; font-weight: 700; margin-bottom: 14px; letter-spacing: -0.01em; }
+        .value-item p { font-size: 15px; color: var(--gray-600); line-height: 1.7; }
 
-        .nav-links {
-            display: flex;
-            gap: 48px;
-            align-items: center;
-        }
+        /* ---- VERTICALS (with imagery) ---- */
+        .vert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .vert-card { background: var(--white); border: 1px solid var(--gray-200); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .vert-card:hover { transform: translateY(-4px); box-shadow: 0 18px 50px rgba(0,0,0,0.1); }
+        .vert-card .ph { aspect-ratio: 4 / 3; width: 100%; }
+        .vert-card:hover .ph img { transform: scale(1.05); }
+        .vert-card .ph img { transition: transform 0.5s ease; }
+        .vert-body { padding: 32px 30px; display: flex; flex-direction: column; flex: 1; }
+        .vert-tag { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 14px; }
+        .vert-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 14px; letter-spacing: -0.01em; }
+        .vert-card > .vert-body > p { font-size: 14.5px; color: var(--gray-600); line-height: 1.65; margin-bottom: 22px; }
+        .vert-list { list-style: none; margin-top: auto; }
+        .vert-list li { font-size: 13.5px; color: var(--gray-600); padding: 9px 0; border-top: 1px solid var(--gray-200); display: flex; gap: 10px; }
+        .vert-list li::before { content: '·'; color: var(--accent); font-weight: 700; }
 
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--white);
-            letter-spacing: 0.02em;
-            transition: opacity 0.2s;
-        }
+        /* ---- SIGNATURE: BUILD SEQUENCE ---- */
+        .build-section { background: var(--black); color: var(--white); }
+        .build-section .sec-head h2 { color: var(--white); }
+        .build-section .sec-head p { color: var(--gray-400); }
+        .build-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+        .build-step { position: relative; }
+        .build-step .ph { aspect-ratio: 3 / 4; width: 100%; --steel-a:#181b20; --steel-b:#22262d; }
+        .build-step .ph img { transition: transform 0.6s ease; }
+        .build-step:hover .ph img { transform: scale(1.06); }
+        .build-step .meta { padding: 22px 20px 6px; }
+        .build-step .step-n { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: 0.1em; }
+        .build-step h3 { font-size: 18px; font-weight: 700; margin: 10px 0 8px; letter-spacing: -0.01em; }
+        .build-step p { font-size: 13.5px; color: var(--gray-400); line-height: 1.6; }
+        .build-foot { margin-top: 48px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.12); }
+        .build-foot p { font-size: 15px; color: var(--gray-300); max-width: 60ch; }
+        .build-foot strong { color: var(--white); }
 
-        .nav-links a:hover {
-            opacity: 0.7;
-        }
+        /* ---- CREDENTIALS ---- */
+        .creds-section { background: var(--gray-100); }
+        .creds-grid { display: grid; grid-template-columns: repeat(4, 1px); grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+        .cred-cell { background: var(--white); padding: 26px 24px; }
+        .cred-k { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); }
+        .cred-v { font-size: 15px; color: var(--black); margin-top: 10px; font-weight: 600; }
+        .cred-v.pending { color: var(--gray-400); font-weight: 500; }
+        .creds-note { font-size: 13px; color: var(--gray-600); margin-top: 24px; max-width: 90ch; }
 
-        .nav-cta {
-            padding: 12px 24px;
-            background: var(--white);
-            color: var(--black) !important;
-            font-weight: 600;
-            font-size: 13px;
-            letter-spacing: 0.02em;
-        }
+        /* ---- CTA ---- */
+        .cta-section { padding: 120px 64px; text-align: center; background: var(--white); }
+        .cta-section h2 { font-size: clamp(34px, 4.4vw, 52px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 20px; }
+        .cta-section p { font-size: 17px; color: var(--gray-600); max-width: 520px; margin: 0 auto 38px; line-height: 1.7; }
+        .btn-black { display: inline-block; padding: 18px 40px; background: var(--black); color: var(--white); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; transition: transform 0.2s; }
+        .btn-black:hover { transform: translateY(-2px); }
 
-        .nav-cta:hover {
-            opacity: 0.9 !important;
-        }
+        /* ---- FOOTER ---- */
+        footer { padding: 56px 64px; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .footer-left { font-size: 13px; color: var(--gray-600); }
+        .footer-links { display: flex; gap: 36px; }
+        .footer-links a { font-size: 13px; color: var(--gray-600); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--black); }
 
-        /* Hero */
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 700px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
+        /* ---- REVEAL ANIM ---- */
+        .rv { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .rv.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
 
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            padding: 0 64px;
-            max-width: 720px;
-        }
-
-        .hero-eyebrow {
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gray-400);
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 5vw, 64px);
-            font-weight: 700;
-            line-height: 1.08;
-            margin-bottom: 28px;
-            letter-spacing: -0.03em;
-            color: var(--white);
-        }
-
-        .hero-text {
-            font-size: 18px;
-            color: rgba(255,255,255,0.85);
-            max-width: 520px;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 18px 36px;
-            background: var(--white);
-            color: var(--black);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-        }
-
-        /* Value Props */
-        .value-section {
-            padding: 120px 64px;
-            background: var(--gray-100);
-        }
-
-        .value-header {
-            max-width: 600px;
-            margin-bottom: 80px;
-        }
-
-        .section-eyebrow {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gray-600);
-            margin-bottom: 16px;
-        }
-
-        .value-header h2 {
-            font-size: clamp(32px, 4vw, 44px);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-        }
-
-        .value-header p {
-            font-size: 17px;
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-        }
-
-        .value-item {
-            padding: 40px;
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-        }
-
-        .value-number {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gray-400);
-            margin-bottom: 24px;
-        }
-
-        .value-item h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-
-        .value-item p {
-            font-size: 15px;
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        /* Services Preview */
-        .services-section {
-            padding: 120px 64px;
-        }
-
-        .services-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 64px;
-        }
-
-        .services-header h2 {
-            font-size: clamp(32px, 4vw, 44px);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .services-header a {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--gray-600);
-            border-bottom: 2px solid var(--gray-200);
-            padding-bottom: 4px;
-            transition: border-color 0.2s;
-        }
-
-        .services-header a:hover {
-            border-color: var(--black);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .service-card {
-            padding: 48px 40px;
-            background: var(--gray-100);
-            transition: background 0.2s;
-        }
-
-        .service-card:hover {
-            background: var(--gray-200);
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-
-        .service-card p {
-            font-size: 15px;
-            color: var(--gray-600);
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-
-        .service-link {
-            font-size: 14px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .service-link::after {
-            content: '→';
-            transition: transform 0.2s;
-        }
-
-        .service-card:hover .service-link::after {
-            transform: translateX(4px);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 120px 64px;
-            background: var(--black);
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 17px;
-            color: var(--gray-400);
-            max-width: 500px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-        }
-
-        .btn-white {
-            display: inline-block;
-            padding: 18px 40px;
-            background: var(--white);
-            color: var(--black);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            transition: transform 0.2s;
-        }
-
-        .btn-white:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            padding: 64px;
-            border-top: 1px solid var(--gray-200);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-left {
-            font-size: 13px;
-            color: var(--gray-600);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .footer-links a {
-            font-size: 13px;
-            color: var(--gray-600);
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--black);
-        }
-
-        /* Mobile */
+        /* ---- MOBILE ---- */
         @media (max-width: 1024px) {
-            .value-grid,
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .value-grid, .vert-grid { grid-template-columns: repeat(2, 1fr); }
+            .build-steps { grid-template-columns: repeat(2, 1fr); }
+            .creds-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
         @media (max-width: 768px) {
-            nav {
-                padding: 24px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content {
-                padding: 0 24px;
-            }
-
-            .value-section,
-            .services-section,
-            .cta-section {
-                padding: 80px 24px;
-            }
-
-            .value-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            footer {
-                padding: 40px 24px;
-                flex-direction: column;
-                gap: 24px;
-                text-align: center;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 24px;
-            }
+            nav, nav.scrolled { padding: 18px 22px; }
+            .nav-links { display: none; }
+            .hero-content { padding: 0 22px 64px; }
+            .warranty-bar { padding: 24px 22px; gap: 18px; }
+            .wb-sep { display: none; }
+            .band-content, .section, .cta-section { padding-left: 22px; padding-right: 22px; }
+            .section { padding-top: 72px; padding-bottom: 72px; }
+            .value-grid, .vert-grid, .build-steps, .creds-grid { grid-template-columns: 1fr; }
+            footer { padding: 36px 22px; flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 <body>
-    <nav>
+    <nav id="nav">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 55" width="280" height="55">
-                <g stroke="#1a1a1a" stroke-width="1.5" fill="none">
-                    <rect x="12" y="6" width="36" height="16" />
-                    <line x1="24" y1="6" x2="24" y2="22" />
-                    <line x1="36" y1="6" x2="36" y2="22" />
-                    <rect x="4" y="24" width="24" height="18" />
-                    <line x1="16" y1="24" x2="16" y2="42" />
-                    <rect x="30" y="24" width="24" height="18" />
-                    <line x1="42" y1="24" x2="42" y2="42" />
+                <g stroke="#ffffff" stroke-width="1.5" fill="none">
+                    <rect x="12" y="6" width="36" height="16" /><line x1="24" y1="6" x2="24" y2="22" /><line x1="36" y1="6" x2="36" y2="22" />
+                    <rect x="4" y="24" width="24" height="18" /><line x1="16" y1="24" x2="16" y2="42" />
+                    <rect x="30" y="24" width="24" height="18" /><line x1="42" y1="24" x2="42" y2="42" />
                 </g>
-                <text x="66" y="25" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#1a1a1a">NORTH AMERICAN</text>
-                <text x="66" y="42" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#1a1a1a">MODULAR</text>
+                <text x="66" y="25" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#ffffff">NORTH AMERICAN</text>
+                <text x="66" y="42" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#ffffff">MODULAR</text>
             </svg>
         </div>
         <div class="nav-links">
             <a href="about.html">About</a>
-            <a href="services.html">Services</a>
+            <a href="services.html">Capabilities</a>
             <a href="contact.html" class="nav-cta">Contact Us</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="hero-video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow">Commercial Container Distribution</p>
-            <h1>Container Systems, Sourced Direct</h1>
-            <p class="hero-text">We source container systems for commercial and industrial applications. Factory-direct pricing from our network of suppliers and fabricators. One point of contact.</p>
-            <a href="contact.html" class="btn-primary">Request a Quote</a>
-        </div>
-    </section>
-
-    <section class="value-section">
-        <div class="value-header">
-            <p class="section-eyebrow">Why North American Modular</p>
-            <h2>Streamlined sourcing for container-based projects</h2>
-            <p>We simplify container procurement by managing vendor relationships and quality verification under one roof. You get the units you need at factory-direct pricing.</p>
-        </div>
-        <div class="value-grid">
-            <div class="value-item">
-                <p class="value-number">01</p>
-                <h3>Factory-Direct Sourcing</h3>
-                <p>We maintain direct relationships with container suppliers and fabricators, cutting out intermediaries and providing competitive pricing on standard and custom units.</p>
-            </div>
-            <div class="value-item">
-                <p class="value-number">02</p>
-                <h3>Single Point of Contact</h3>
-                <p>One team manages your order from specification through purchase. No coordination gaps, no chasing vendors, no surprises.</p>
-            </div>
-            <div class="value-item">
-                <p class="value-number">03</p>
-                <h3>Commercial Focus</h3>
-                <p>We specialize in commercial and industrial applications. Bulk orders, custom specifications, and project-based sourcing.</p>
+            <p class="hero-eyebrow">Design-Build Modular Construction</p>
+            <h1>Custom modular for defense, data centers, and critical infrastructure</h1>
+            <p class="hero-text">We design, coordinate, and deliver custom modular structures, developed with our engineering partners and built through a vetted fabrication network. One team holds the contract and stands behind the work.</p>
+            <div class="hero-ctas">
+                <a href="contact.html" class="btn-primary">Request a Quote</a>
+                <a href="services.html" class="btn-outline">View Capabilities</a>
             </div>
         </div>
     </section>
 
-    <section class="services-section">
-        <div class="services-header">
-            <h2>Our Services</h2>
-            <a href="services.html">View All Services</a>
+    <!-- WARRANTY BAR -->
+    <div class="warranty-bar">
+        <div class="wb-item"><span class="wb-num">5-Year</span><span class="wb-label">Structural Warranty</span></div>
+        <div class="wb-sep"></div>
+        <div class="wb-item"><span class="wb-num">1-Year</span><span class="wb-label">Parts Warranty</span></div>
+        <div class="wb-sep"></div>
+        <div class="wb-note">Held by <strong>North American Modular</strong>, not your subcontractor.</div>
+    </div>
+
+    <!-- STATEMENT BAND -->
+    <section class="band">
+        <!-- PHOTO SLOT 1 — wide fabrication shot, landscape, min 1920x1080 -->
+        <div class="ph" data-label="Fabrication photo&#10;landscape · 1920×1080+&#10;swap this slot">
+            <!-- <img src="your-shop-photo-1.jpg" alt="Fabrication in progress"> -->
         </div>
-        <div class="services-grid">
-            <a href="services.html" class="service-card">
-                <h3>Standard Containers</h3>
-                <p>New and used containers sourced to specification. Standard sizes, high-cube variants, and specialty units available.</p>
-                <span class="service-link">Learn More</span>
-            </a>
-            <a href="services.html" class="service-card">
-                <h3>Modified Units</h3>
-                <p>Pre-configured containers for commercial use sourced from established fabricators. Offices, retail, hospitality, and industrial applications.</p>
-                <span class="service-link">Learn More</span>
-            </a>
-            <a href="services.html" class="service-card">
-                <h3>Bulk & Project Orders</h3>
-                <p>Volume pricing for multi-unit purchases. Dedicated sourcing for large-scale projects and ongoing supply needs.</p>
-                <span class="service-link">Learn More</span>
-            </a>
+        <div class="band-overlay"></div>
+        <div class="band-content rv">
+            <p class="k">Built, not brokered</p>
+            <h2>Most modular vendors source a box. We fabricate the structure.</h2>
+            <p>Every unit is a custom build, developed with our design and engineering partners and fabricated under our oversight. You're buying a build we control end to end, not a unit we found.</p>
         </div>
     </section>
 
+    <!-- VALUE PROPS -->
+    <section class="section value-section">
+        <div class="wrap">
+            <div class="sec-head rv">
+                <p class="sec-eyebrow">Why North American Modular</p>
+                <h2>We own the process, the oversight, and the outcome</h2>
+                <p>NAM is a design-build firm. We coordinate design and engineering and oversee every phase of construction, so you get one accountable party instead of a chain of vendors pointing at each other.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-item rv"><p class="value-num">01</p><h3>Design &amp; Engineering, Coordinated</h3><p>We work with our product, design, and engineering partners to turn your requirements into a buildable, code-compliant unit. Nothing gets built off a guess, and nothing leaves without stamped, approved drawings behind it.</p></div>
+                <div class="value-item rv"><p class="value-num">02</p><h3>Single Point of Accountability</h3><p>One contract, held by NAM. We manage a vetted fabrication network and oversee every phase ourselves. You deal with us, from specification through delivery and warranty.</p></div>
+                <div class="value-item rv"><p class="value-num">03</p><h3>Backed In Writing</h3><p>A 5-year structural warranty and 1-year parts warranty, carried by NAM. We don't hand you a unit and disappear. The obligation to stand behind it is ours, in writing.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERTICALS -->
+    <section class="section">
+        <div class="wrap">
+            <div class="sec-head rv">
+                <p class="sec-eyebrow">What We Build</p>
+                <h2>Commercial modular, built for buyers who answer to a deadline</h2>
+                <p>Every structure is a custom commercial build for operators, developers, and contractors who answer to uptime, a schedule, or an inspector. We don't build homes.</p>
+            </div>
+
+            <div class="vert-grid">
+                <div class="vert-card rv">
+                    <!-- PHOTO SLOT — data center / power enclosure, 4:3 -->
+                    <div class="ph" data-label="Data center build&#10;4:3 · swap slot"><!-- <img src="vert-datacenter.jpg" alt=""> --></div>
+                    <div class="vert-body">
+                        <p class="vert-tag">Vertical 01</p>
+                        <h3>Data Centers &amp; Power-Dense Computing</h3>
+                        <p>Prefabricated enclosures and edge builds that deploy faster than stick-built, designed around the power, cooling, and access the load demands. Data halls and crypto/mining infrastructure alike.</p>
+                        <ul class="vert-list"><li>Edge &amp; modular data halls</li><li>Power, battery &amp; generator enclosures</li><li>Immersion- &amp; air-cooled mining units</li><li>Thermal- &amp; airflow-ready builds</li><li>Rapid-deploy capacity expansion</li></ul>
+                    </div>
+                </div>
+                <div class="vert-card rv">
+                    <!-- PHOTO SLOT — oil & gas / energy site, 4:3 -->
+                    <div class="ph" data-label="Oil &amp; gas build&#10;4:3 · swap slot"><!-- <img src="vert-oilgas.jpg" alt=""> --></div>
+                    <div class="vert-body">
+                        <p class="vert-tag">Vertical 02</p>
+                        <h3>Oil, Gas &amp; Energy</h3>
+                        <p>Rugged modular structures for wellsites, field operations, and energy facilities, built to stand up fast and hold up to the conditions.</p>
+                        <ul class="vert-list"><li>Wellsite offices &amp; control buildings</li><li>Crew quarters &amp; workforce housing</li><li>Equipment &amp; instrument enclosures</li><li>Blast-resistant &amp; hardened options</li></ul>
+                    </div>
+                </div>
+                <div class="vert-card rv">
+                    <!-- PHOTO SLOT — industrial / construction, 4:3 -->
+                    <div class="ph" data-label="Industrial build&#10;4:3 · swap slot"><!-- <img src="vert-industrial.jpg" alt=""> --></div>
+                    <div class="vert-body">
+                        <p class="vert-tag">Vertical 03</p>
+                        <h3>Industrial &amp; Construction</h3>
+                        <p>In-plant offices, enclosures, and site facilities for manufacturing, construction, and infrastructure programs.</p>
+                        <ul class="vert-list"><li>In-plant &amp; site offices</li><li>Equipment &amp; utility enclosures</li><li>Control rooms &amp; guard houses</li><li>Restroom &amp; ablution blocks</li></ul>
+                    </div>
+                </div>
+                <div class="vert-card rv">
+                    <!-- PHOTO SLOT — workforce / student housing, 4:3 -->
+                    <div class="ph" data-label="Housing build&#10;4:3 · swap slot"><!-- <img src="vert-housing.jpg" alt=""> --></div>
+                    <div class="vert-body">
+                        <p class="vert-tag">Vertical 04</p>
+                        <h3>Workforce &amp; Student Housing</h3>
+                        <p>Commercial crew and student housing built as project infrastructure for operators, developers, and institutions.</p>
+                        <ul class="vert-list"><li>Workforce &amp; crew housing</li><li>Student &amp; institutional housing</li><li>Ablution, shower &amp; restroom blocks</li><li>Multi-unit &amp; phased builds</li></ul>
+                    </div>
+                </div>
+                <div class="vert-card rv">
+                    <!-- PHOTO SLOT — commercial / retail unit, 4:3 -->
+                    <div class="ph" data-label="Retail build&#10;4:3 · swap slot"><!-- <img src="vert-retail.jpg" alt=""> --></div>
+                    <div class="vert-body">
+                        <p class="vert-tag">Vertical 05</p>
+                        <h3>Commercial &amp; Retail</h3>
+                        <p>Modular retail, food-service, and vendor units for operators and developers, fabricated through our vetted partners and delivered ready to place.</p>
+                        <ul class="vert-list"><li>Retail &amp; pop-up units</li><li>Restaurant, café &amp; food-service shells</li><li>Concession &amp; vendor stands</li><li>Refrigerated &amp; cold-storage units</li></ul>
+                    </div>
+                </div>
+                <div class="vert-card rv">
+                    <!-- PHOTO SLOT — government/secure (generic, no insignia), 4:3 -->
+                    <div class="ph" data-label="Government build&#10;4:3 · swap slot"><!-- <img src="vert-defense.jpg" alt=""> --></div>
+                    <div class="vert-body">
+                        <p class="vert-tag">Vertical 06 · In development</p>
+                        <h3>Government &amp; Defense</h3>
+                        <p>Modular facilities for federal, defense, and government projects. SAM.gov registration is underway and we're building toward direct federal and prime-subcontract work. We welcome early conversations with agencies and primes.</p>
+                        <ul class="vert-list"><li>Secure storage &amp; enclosures</li><li>Workforce housing &amp; billeting</li><li>Command, control &amp; support facilities</li><li>Prime-subcontract fabrication</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE: BUILD SEQUENCE -->
+    <section class="section build-section">
+        <div class="wrap">
+            <div class="sec-head rv">
+                <p class="sec-eyebrow">Inside The Build</p>
+                <h2>From raw steel to a unit you can stand behind</h2>
+                <p>Every structure moves through the same controlled sequence on our floor. This is what oversight actually looks like.</p>
+            </div>
+            <div class="build-steps">
+                <div class="build-step rv">
+                    <!-- PHOTO SLOT 5 — cutting/material, portrait 3:4 -->
+                    <div class="ph" data-label="Step 01 photo&#10;3:4 portrait"><!-- <img src="step-cut.jpg" alt=""> --></div>
+                    <div class="meta"><p class="step-n">STEP 01</p><h3>Spec &amp; Cut</h3><p>Approved drawings drive controlled cutting of certified material to spec.</p></div>
+                </div>
+                <div class="build-step rv">
+                    <!-- PHOTO SLOT 6 — welding, portrait 3:4 -->
+                    <div class="ph" data-label="Step 02 photo&#10;3:4 portrait"><!-- <img src="step-weld.jpg" alt=""> --></div>
+                    <div class="meta"><p class="step-n">STEP 02</p><h3>Fabricate &amp; Weld</h3><p>Structure assembled and welded under our oversight, every joint documented.</p></div>
+                </div>
+                <div class="build-step rv">
+                    <!-- PHOTO SLOT 7 — fit-out/assembly, portrait 3:4 -->
+                    <div class="ph" data-label="Step 03 photo&#10;3:4 portrait"><!-- <img src="step-assemble.jpg" alt=""> --></div>
+                    <div class="meta"><p class="step-n">STEP 03</p><h3>Outfit &amp; Finish</h3><p>Systems, insulation, and finish installed to the configuration you specified.</p></div>
+                </div>
+                <div class="build-step rv">
+                    <!-- PHOTO SLOT 8 — inspection/QA, portrait 3:4 -->
+                    <div class="ph" data-label="Step 04 photo&#10;3:4 portrait"><!-- <img src="step-qa.jpg" alt=""> --></div>
+                    <div class="meta"><p class="step-n">STEP 04</p><h3>Inspect &amp; Release</h3><p>Our team inspects, verifies, and logs a traceable quality record per unit.</p></div>
+                </div>
+            </div>
+            <div class="build-foot rv">
+                <p><strong>This is the proof.</strong> The structures on this page are fabricated on our floor, under our control. When we say we stand behind the unit, this is the work we're standing behind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section creds-section">
+        <div class="wrap">
+            <div class="sec-head rv">
+                <p class="sec-eyebrow">Procurement</p>
+                <h2>Federal contracting: registration underway</h2>
+                <p>We're standing up the credentials federal and prime-contractor buyers screen for. These are accurate as of today and updated as registration completes.</p>
+            </div>
+            <div class="creds-grid rv">
+                <div class="cred-cell"><p class="cred-k">SAM.gov UEI</p><p class="cred-v pending">Registration in progress</p></div>
+                <div class="cred-cell"><p class="cred-k">CAGE Code</p><p class="cred-v pending">Pending SAM.gov</p></div>
+                <div class="cred-cell"><p class="cred-k">Primary NAICS</p><p class="cred-v">[ 332311 / 332312 ]</p></div>
+                <div class="cred-cell"><p class="cred-k">Business Size</p><p class="cred-v pending">[ Confirm ]</p></div>
+            </div>
+            <p class="creds-note">We list only credentials we actually hold. UEI and CAGE will appear here, verbatim, once SAM.gov registration is validated. We don't claim certifications or set-aside statuses we haven't earned.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
     <section class="cta-section">
-        <h2>Ready to Start Your Project?</h2>
-        <p>Tell us about your requirements. We'll provide specifications, pricing, and delivery timeline within 48 hours.</p>
-        <a href="contact.html" class="btn-white">Get in Touch</a>
+        <h2>Have a spec? We'll quote it.</h2>
+        <p>Send us your requirements, drawings, or solicitation. We'll respond with specifications, pricing, and a realistic delivery timeline.</p>
+        <a href="contact.html" class="btn-black">Request a Quote</a>
     </section>
 
     <footer>
-        <div class="footer-left">
-            © 2025 North American Modular LLC. All rights reserved.
-        </div>
+        <div class="footer-left">© 2026 North American Modular LLC. All rights reserved.</div>
         <div class="footer-links">
             <a href="about.html">About</a>
-            <a href="services.html">Services</a>
+            <a href="services.html">Capabilities</a>
             <a href="contact.html">Contact</a>
             <a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a>
         </div>
     </footer>
+
+    <script>
+        var nav = document.getElementById('nav');
+        var onScroll = function () { if (window.scrollY > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); };
+        window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduce && 'IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+        } else {
+            document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+        }
+    </script>
 </body>
 </html>
