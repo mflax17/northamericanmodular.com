@@ -32,10 +32,21 @@
         /* ---- NAV ---- */
         nav { position: fixed; top: 0; left: 0; right: 0; padding: 28px 64px; display: flex; justify-content: space-between; align-items: center; z-index: 100; transition: padding 0.3s ease, background 0.3s ease, border-color 0.3s ease; border-bottom: 1px solid transparent; }
         nav.scrolled { padding: 16px 64px; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom-color: rgba(255,255,255,0.08); }
-        .logo svg { height: 46px; width: auto; transition: height 0.3s ease; }
-        nav.scrolled .logo svg { height: 38px; }
-        .logo svg text { fill: var(--white); }
-        .logo svg g { stroke: var(--white); }
+        .logo {
+    display: block;
+    line-height: 0;
+}
+
+.logo img {
+    width: 190px;
+    height: auto;
+    display: block;
+    transition: width 0.3s ease;
+}
+
+nav.scrolled .logo img {
+    width: 165px;
+}
         .nav-links { display: flex; gap: 44px; align-items: center; }
         .nav-links a { font-size: 14px; font-weight: 500; color: var(--white); letter-spacing: 0.02em; transition: opacity 0.2s; }
         .nav-links a:hover { opacity: 0.65; }
