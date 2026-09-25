@@ -83,6 +83,11 @@
             display: block;
         }
 
+        .ph:has(img)::before,
+        .ph:has(img)::after {
+            display: none;
+        }
+
         /* ---- NAV ---- */
         nav {
             position: fixed;
@@ -1000,7 +1005,7 @@
                         class="ph"
                         data-label="Data center build&#10;4:3 · swap slot"
                     >
-                        <!-- <img src="vert-datacenter.jpg" alt=""> -->
+                        <img src="vert-datacenter.jpg" alt="Aluminum data center enclosure being fabricated under an overhead crane">
                     </div>
 
                     <div class="vert-body">
