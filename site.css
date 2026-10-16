@@ -833,10 +833,10 @@ footer {
 .page-hero .hero-text { max-width: 640px; }
 
 /* Commitments strip: warranty bar with four items */
-.warranty-bar.four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: left; }
+.warranty-bar.four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; align-items: start; text-align: center; padding-left: max(64px, calc((100% - 1180px) / 2)); padding-right: max(64px, calc((100% - 1180px) / 2)); }
 .warranty-bar.four .wb-sep { display: none; }
-.warranty-bar.four .wb-item { flex-direction: column; align-items: flex-start; gap: 4px; border-left: 1px solid rgba(255,255,255,0.18); padding-left: 22px; }
-.warranty-bar.four .wb-item:first-child { border-left: 0; padding-left: 0; }
+.warranty-bar.four .wb-item { flex-direction: column; align-items: center; gap: 4px; border-left: 1px solid rgba(255,255,255,0.18); padding: 0 16px; }
+.warranty-bar.four .wb-item:first-child { border-left: 0; }
 
 /* Service cards: six-up version of the value grid */
 .value-grid.six { grid-template-columns: repeat(3, 1fr); }
@@ -915,7 +915,8 @@ footer {
     .hero.page-hero { min-height: 70vh; padding-top: 130px; }
     .value-grid.six, .ind-grid { grid-template-columns: 1fr; }
     .warranty-bar.four { grid-template-columns: 1fr 1fr; gap: 22px 18px; }
-    .warranty-bar.four .wb-item { border-left: 0; padding-left: 0; }
+    .warranty-bar.four { padding-left: 22px; padding-right: 22px; gap: 22px 0; }
+    .warranty-bar.four .wb-item { border-left: 0; padding: 0 8px; }
     .contact-form { padding: 30px 22px; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
     .faq summary { font-size: 17px; }
