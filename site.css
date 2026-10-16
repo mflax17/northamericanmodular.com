@@ -983,10 +983,17 @@ footer {
 .article li::marker { color: var(--accent); }
 .article strong { color: var(--black); }
 .article a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; }
-.guide-cta { margin-top: 64px; padding: 32px 34px; background: var(--gray-100); border-left: 3px solid var(--accent); }
+.guide-cta { margin-top: 40px; padding: 32px 34px; background: var(--gray-100); border-left: 3px solid var(--accent); }
 .guide-cta p { margin-bottom: 20px; }
 .guide-cta .btn-black { display: inline-block; text-decoration: none; color: var(--white); }
 .guide-faq { background: var(--gray-100); }
+.g-fig { margin: 30px 0 34px; }
+.g-fig img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
+.g-fig figcaption { margin-top: 10px; font-size: 14px; color: var(--gray-600); }
+.author-box { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--gray-200); }
+.author-box .ab-name { font-size: 17px; font-weight: 700; color: var(--black); margin-bottom: 2px; }
+.author-box .ab-role { font-size: 14px; color: var(--gray-600); margin-bottom: 12px; }
+.author-box p { font-size: 15px; }
 .rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .rel-card { display: flex; flex-direction: column; gap: 12px; padding: 30px; border: 1px solid var(--gray-200); background: var(--white); color: var(--black); text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
 .rel-card:hover { border-color: var(--black); transform: translateY(-3px); }

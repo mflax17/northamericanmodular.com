@@ -43,7 +43,12 @@
    "datePublished": "2026-10-16",
    "dateModified": "2026-10-16",
    "author": {
-    "@id": "https://northamericanmodular.com/#organization"
+    "@type": "Person",
+    "name": "Mitch Flax",
+    "jobTitle": "President",
+    "worksFor": {
+     "@id": "https://northamericanmodular.com/#organization"
+    }
    },
    "publisher": {
     "@id": "https://northamericanmodular.com/#organization"
@@ -81,7 +86,7 @@
      "name": "What is a modular data center enclosure?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It's a prefabricated room, usually steel-framed, that houses IT, power or cooling equipment and is delivered to the site finished and inspected. It can hold racks, switchgear, UPS systems, batteries or mining equipment."
+      "text": "A prefabricated room, usually steel-framed, that houses IT, power or cooling equipment and arrives at the site finished and inspected."
      }
     },
     {
@@ -89,7 +94,7 @@
      "name": "How much cooling does a data center enclosure need?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Roughly as much as the power going into the equipment, since nearly all of it becomes heat. Add solar gain and lighting, then size for the hottest design day with at least one cooling unit out of service if uptime matters."
+      "text": "Roughly as much as the power going into the equipment, since nearly all of it turns into heat. Add solar gain and lighting, then size for the hottest design day with one cooling unit out of service."
      }
     },
     {
@@ -97,15 +102,7 @@
      "name": "Should batteries go in a separate enclosure?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Often, yes. Lithium-ion battery systems fall under NFPA 855 and UL 9540A, with requirements for spacing, ventilation, detection and suppression. Isolating them can simplify fire protection and protect the rest of the equipment."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Can a modular enclosure be expanded later?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes, if you plan for it. Size the utility service, pads and cable routes for the future modules when you design the first one."
+      "text": "Often, yes. Lithium-ion systems fall under NFPA 855 and UL 9540A, and isolating them simplifies fire protection and protects the rest of the equipment."
      }
     }
    ]
@@ -141,7 +138,7 @@
             <p class="hero-eyebrow"><a href="/guides/">Guides</a> / Data Centers & Power</p>
             <h1>Modular enclosures for data centers and power</h1>
             <p class="hero-text">Where prefabricated enclosures fit in a data center or power project, and how to specify one that handles the heat, the weight and the uptime requirements.</p>
-            <p class="guide-meta">4 min read &middot; Updated October 2026</p>
+            <p class="guide-meta">By Mitch Flax, President &middot; 3 min read &middot; Updated October 2026</p>
         </div>
     </section>
 
@@ -150,66 +147,42 @@
             <aside class="toc">
                 <p class="toc-k">On this page</p>
                 <ol>
-                    <li><a href="#where-modular-fits-in-a-data-center-project">Where modular fits in a data center project</a></li>
-                    <li><a href="#cooling-decides-almost-everything">Cooling decides almost everything</a></li>
-                    <li><a href="#power-and-redundancy">Power and redundancy</a></li>
-                    <li><a href="#batteries-need-their-own-planning">Batteries need their own planning</a></li>
-                    <li><a href="#fire-protection-and-monitoring">Fire protection and monitoring</a></li>
-                    <li><a href="#floors-structure-and-cable-entries">Floors, structure and cable entries</a></li>
-                    <li><a href="#delivery-set-and-scaling">Delivery, set and scaling</a></li>
-                    <li><a href="#what-to-send-for-a-quote">What to send for a quote</a></li>
+                    <li><a href="#it-s-not-just-racks-in-a-box">It's not just racks in a box</a></li>
+                    <li><a href="#three-numbers-to-settle-before-anything-else">Three numbers to settle before anything else</a></li>
+                    <li><a href="#redundancy-costs-floor-space">Redundancy costs floor space</a></li>
+                    <li><a href="#batteries-deserve-their-own-room">Batteries deserve their own room</a></li>
+                    <li><a href="#fire-monitoring-and-the-stuff-that-s-easy-to-forget">Fire, monitoring and the stuff that's easy to forget</a></li>
+                    <li><a href="#weight-cables-and-growth">Weight, cables and growth</a></li>
                     <li><a href="#faq">Common questions</a></li>
                 </ol>
             </aside>
             <article class="article">
-                <h2 id="where-modular-fits-in-a-data-center-project">Where modular fits in a data center project</h2>
-<p>Most people picture a modular data center as a box full of racks, and that's one use. In practice, prefabricated enclosures show up all over data center and power projects:</p>
-<ul>
-<li><strong>Edge and remote sites</strong> where a full building doesn't make sense, such as cell sites, campuses, factories and oil fields.</li>
-<li><strong>Electrical rooms and power skids</strong> housing switchgear, UPS systems and distribution, delivered as a finished room and set next to the main building.</li>
-<li><strong>Battery and UPS rooms</strong>, which often have their own fire and ventilation requirements and are easier to isolate in a separate structure.</li>
-<li><strong>Generator and fuel enclosures.</strong></li>
-<li><strong>Network and telecom shelters.</strong></li>
-<li><strong>Crypto mining and high-density compute</strong>, with either air-cooled units moving a lot of air or immersion tanks with dry coolers.</li>
-<li><strong>Capacity additions</strong> on existing campuses where adding a module beats expanding the building.</li>
-</ul>
-<p>The common thread is equipment that needs a controlled room, delivered as a finished, inspected unit so site work is limited to foundations, utilities and connections.</p>
-                <h2 id="cooling-decides-almost-everything">Cooling decides almost everything</h2>
-<p>An IT or power enclosure is a heat problem first. Nearly every watt of power that goes into the equipment comes out as heat, and the room has to remove it.</p>
-<p>ASHRAE's thermal guidelines for data processing environments are the usual reference. The recommended inlet air range for most IT equipment is about 18 to 27 °C (64 to 81 °F). Your design should hold that range on the hottest day at the site with one cooling unit out of service.</p>
-<p>The common approaches, roughly in order of density:</p>
-<ul>
-<li><strong>Wall-mount air conditioners</strong> for low to moderate loads. They're simple, the equipment stays outside the room, and adding a redundant unit is straightforward.</li>
-<li><strong>Split or in-row DX cooling</strong> for higher densities, often with hot or cold aisle containment.</li>
-<li><strong>Chilled water</strong> where the site already has a plant.</li>
-<li><strong>Free air cooling</strong> for some mining and high-density compute setups, which needs serious filtration and a plan for humidity and dust.</li>
-<li><strong>Immersion</strong>, where the heat goes into fluid and out to dry coolers. The room itself carries a much smaller air load, but the floor carries a lot more weight.</li>
-</ul>
-<p>Get the heat load in kilowatts, the target inlet temperature and the redundancy level settled first. The enclosure layout, the electrical design and the HVAC all follow from those three numbers.</p>
-                <h2 id="power-and-redundancy">Power and redundancy</h2>
-<p>Data center buyers usually describe redundancy in shorthand. N means just enough capacity, N+1 means one spare component, and 2N means two complete, independent systems. Each step up adds equipment, floor space and cost, so decide what the site actually needs. An edge site that can fail over to another location may be fine at N+1. A site with nowhere to fail over may need more.</p>
-<p>Whatever the level, the enclosure has to make room for it: space for the UPS and batteries, a path for utility and generator feeds, an automatic transfer switch, and the NEC working clearances in front of every piece of gear. Bring the one-line diagram to the first conversation if you have it.</p>
-                <h2 id="batteries-need-their-own-planning">Batteries need their own planning</h2>
-<p>Battery rooms are where codes have tightened the most. Lithium-ion systems are typically evaluated under UL 9540 and the UL 9540A fire test method, and installed under NFPA 855, which covers spacing, capacity limits, ventilation, detection and suppression. Valve-regulated lead-acid batteries have their own ventilation requirements because they can release hydrogen.</p>
-<p>That's one reason many owners put batteries in a separate enclosure from the rest of the gear. Isolation can simplify fire protection and protect the IT room if something goes wrong.</p>
-                <h2 id="fire-protection-and-monitoring">Fire protection and monitoring</h2>
-<p>NFPA 75 covers fire protection for IT equipment rooms. Many enclosures use a clean agent system designed under NFPA 2001, which puts out a fire without water damage, along with early warning smoke detection. The enclosure has to be tight enough to hold the agent concentration, so door seals and penetrations matter.</p>
-<p>Remote sites also need eyes on them: temperature and humidity sensors, door contacts, leak detection, cameras and a connection to whatever building management or DCIM platform the owner runs. It's cheaper to plan the conduit and mounting points up front than to add them in the field.</p>
-                <h2 id="floors-structure-and-cable-entries">Floors, structure and cable entries</h2>
-<p>IT and power equipment is heavy. A loaded rack can weigh well over 2,000 pounds, UPS and battery cabinets weigh more, and immersion tanks full of fluid are heavier still. Floor design should be based on the actual equipment, with point loads under cabinet feet and a plan for moving equipment in.</p>
-<p>Decide early whether cables come in from above or below. Overhead tray keeps the floor clear and is common in enclosures. Bottom entry needs openings in the floor frame designed in from the start, not cut later.</p>
-                <h2 id="delivery-set-and-scaling">Delivery, set and scaling</h2>
-<p>Data center enclosures follow the same transport limits as any modular unit. Loads wider than about 8.5 feet or taller than about 13.5 feet become oversize, so large rooms are often split into modules. Plan the crane, the lifting points and the foundation alongside the enclosure design.</p>
-<p>One of the best reasons to go modular is that capacity can be added in steps. If you expect to grow, design the first module with the utility capacity, pad space and cable routing for the next one.</p>
-                <h2 id="what-to-send-for-a-quote">What to send for a quote</h2>
-<ul>
-<li>The equipment list with dimensions, weights and heat output.</li>
-<li>The redundancy level for power and cooling.</li>
-<li>The site location, so wind, snow and seismic loads and design temperatures can be set.</li>
-<li>The one-line diagram, if you have one.</li>
-<li>Fire protection and monitoring requirements.</li>
-<li>Your target delivery date. Standard lead time for most projects is 8-12 weeks.</li>
-</ul>
+                <h2 id="it-s-not-just-racks-in-a-box">It's not just racks in a box</h2>
+<p>When people hear "modular data center," they picture a container full of servers. That's one use. On most projects the enclosures are doing less glamorous work: electrical rooms and power skids next to the main building, UPS and battery rooms that need to be isolated, generator enclosures, network shelters at remote sites, and edge deployments at cell sites, campuses and oil fields where a full building makes no sense.</p>
+<p>Crypto mining and other high-density compute have pushed the category further, with air-cooled rooms that move enormous volumes of air and immersion setups where the heat goes into fluid. And on existing campuses, a new module is often the cheapest way to add capacity without touching the main building.</p>
+<p>What all of these have in common is equipment that needs a controlled room, delivered finished and inspected, so the site work comes down to foundations, utilities and connections.</p>
+                <h2 id="three-numbers-to-settle-before-anything-else">Three numbers to settle before anything else</h2>
+<p>An IT or power enclosure is a heat problem first. Nearly every watt that goes into the equipment comes out as heat, and the room has to get rid of it. Before layout or HVAC can be designed, you need three numbers: the heat load in kilowatts, the target inlet temperature, and the redundancy level.</p>
+<p>For inlet temperature, ASHRAE's thermal guidelines are the usual reference. The recommended range for most IT equipment is about 18 to 27 °C (64 to 81 °F). Your design should hold that on the hottest day at the site with one cooling unit down.</p>
+<p>How you get there depends on density. Wall-mount air conditioners handle low to moderate loads well and keep the equipment outside the room. Split or in-row DX systems, usually with hot or cold aisle containment, take you higher. Chilled water makes sense where there's already a plant. Some mining operations run free air cooling, which works but needs serious filtration and a plan for humidity and dust. Immersion moves most of the heat out through dry coolers, which takes load off the room air but puts a lot more weight on the floor.</p>
+                <h2 id="redundancy-costs-floor-space">Redundancy costs floor space</h2>
+<p>N means just enough, N+1 means one spare, 2N means two complete independent systems. Every step up adds equipment, floor space and money, so be honest about what the site needs. An edge site that can fail over to another location may be fine at N+1. A site with nowhere else to go may need more.</p>
+<p>Whatever you pick, the enclosure has to make room for it: the UPS and batteries, utility and generator feeds, a transfer switch, and the code-required working space in front of every piece of gear. If you have a one-line diagram, bring it to the first call. It saves a lot of back and forth.</p>
+                <h2 id="batteries-deserve-their-own-room">Batteries deserve their own room</h2>
+<p>This is where codes have tightened the most. Lithium-ion systems are typically evaluated under UL 9540 and the UL 9540A fire test, and installed under NFPA 855, which covers spacing, capacity limits, ventilation, detection and suppression. Lead-acid batteries have their own ventilation rules because they can release hydrogen.</p>
+<p>That's why a lot of owners put batteries in a separate enclosure. It simplifies fire protection, and if something does go wrong, it isn't in the same room as the servers.</p>
+                <h2 id="fire-monitoring-and-the-stuff-that-s-easy-to-forget">Fire, monitoring and the stuff that's easy to forget</h2>
+<p>NFPA 75 covers fire protection for IT rooms. Many enclosures use a clean agent system under NFPA 2001, which puts out a fire without water, paired with early warning smoke detection. For the agent to work, the room has to hold its concentration, so door seals and penetrations matter more than people expect.</p>
+<p>Remote sites need monitoring: temperature and humidity, door contacts, leak detection, cameras, and a connection to whatever building management or DCIM system the owner uses. Running the conduit and setting mounting points during fabrication is cheap. Adding them in the field is not.</p>
+                <h2 id="weight-cables-and-growth">Weight, cables and growth</h2>
+<p>A loaded rack can weigh well over 2,000 pounds. UPS and battery cabinets weigh more, and immersion tanks full of fluid are heavier still. Design the floor from the actual equipment, including point loads under cabinet feet and the path to move gear in.</p>
+<p>Decide early whether cable comes in overhead or from below. Overhead tray keeps the floor clear and is common in enclosures. Bottom entry is fine too, as long as the openings are designed into the floor frame from the start rather than cut later.</p>
+<p>And if you expect to grow, design the first module with the next one in mind: utility capacity, pad space and cable routes. Adding capacity in steps is one of the best reasons to go modular in the first place. Standard lead time for most of our projects is 8-12 weeks.</p>
+                <div class="author-box">
+                    <p class="ab-name">Mitch Flax</p>
+                    <p class="ab-role">President, North American Modular</p>
+                    <p>North American Modular coordinates the design, engineering and delivery of custom modular enclosures for infrastructure, energy and commercial clients, and oversees every unit through fabrication and inspection. Questions about this guide? Email <a href="mailto:mitch@northamericanmodular.com">mitch@northamericanmodular.com</a>.</p>
+                </div>
                 <div class="guide-cta">
                     <p><strong>Working on a data center or power project?</strong> Send us your drawings, equipment list or solicitation and we'll come back with specifications and pricing.</p>
                     <a href="/contact.html" class="btn-black">Request a Quote</a>
@@ -227,19 +200,15 @@
             <div class="faq">
                 <details>
                     <summary>What is a modular data center enclosure?</summary>
-                    <p>It's a prefabricated room, usually steel-framed, that houses IT, power or cooling equipment and is delivered to the site finished and inspected. It can hold racks, switchgear, UPS systems, batteries or mining equipment.</p>
+                    <p>A prefabricated room, usually steel-framed, that houses IT, power or cooling equipment and arrives at the site finished and inspected.</p>
                 </details>
                 <details>
                     <summary>How much cooling does a data center enclosure need?</summary>
-                    <p>Roughly as much as the power going into the equipment, since nearly all of it becomes heat. Add solar gain and lighting, then size for the hottest design day with at least one cooling unit out of service if uptime matters.</p>
+                    <p>Roughly as much as the power going into the equipment, since nearly all of it turns into heat. Add solar gain and lighting, then size for the hottest design day with one cooling unit out of service.</p>
                 </details>
                 <details>
                     <summary>Should batteries go in a separate enclosure?</summary>
-                    <p>Often, yes. Lithium-ion battery systems fall under NFPA 855 and UL 9540A, with requirements for spacing, ventilation, detection and suppression. Isolating them can simplify fire protection and protect the rest of the equipment.</p>
-                </details>
-                <details>
-                    <summary>Can a modular enclosure be expanded later?</summary>
-                    <p>Yes, if you plan for it. Size the utility service, pads and cable routes for the future modules when you design the first one.</p>
+                    <p>Often, yes. Lithium-ion systems fall under NFPA 855 and UL 9540A, and isolating them simplifies fire protection and protects the rest of the equipment.</p>
                 </details>
             </div>
         </div>
