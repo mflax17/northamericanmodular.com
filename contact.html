@@ -122,10 +122,8 @@
             border-bottom: 1px solid var(--gray-200);
         }
 
-        .logo svg {
-            height: 48px;
-            width: auto;
-        }
+        .logo { display: inline-flex; align-items: center; }
+        .logo img { height: 44px; width: auto; display: block; }
 
         .nav-links {
             display: flex;
@@ -398,21 +396,7 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 55" width="280" height="55">
-                <g stroke="#0a0a0a" stroke-width="1.5" fill="none">
-                    <rect x="12" y="6" width="36" height="16" />
-                    <line x1="24" y1="6" x2="24" y2="22" />
-                    <line x1="36" y1="6" x2="36" y2="22" />
-                    <rect x="4" y="24" width="24" height="18" />
-                    <line x1="16" y1="24" x2="16" y2="42" />
-                    <rect x="30" y="24" width="24" height="18" />
-                    <line x1="42" y1="24" x2="42" y2="42" />
-                </g>
-                <text x="66" y="25" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#0a0a0a">NORTH AMERICAN</text>
-                <text x="66" y="42" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#0a0a0a">MODULAR</text>
-            </svg>
-        </div>
+        <a href="index.html" class="logo" aria-label="North American Modular home"><img src="NAMLogoDark.png" alt="North American Modular" width="640" height="167"></a>
         <div class="nav-links">
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
@@ -556,7 +540,8 @@
                 { name: 'phone', value: val('phone') },
                 { name: 'company', value: val('company') },
                 { name: 'nam_project_type', value: val('project-type') },
-                { name: 'message', value: val('message') }
+                { name: 'message', value: val('message') },
+                { name: 'lead_business_unit', value: 'nam_commercial' }
             ].filter(function (f) { return f.value; });
             var context = { pageUri: location.href, pageName: document.title };
             var hutk = cookie('hubspotutk'); if (hutk) context.hutk = hutk;
