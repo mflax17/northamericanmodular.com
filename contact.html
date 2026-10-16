@@ -388,6 +388,12 @@
                 gap: 24px;
             }
         }
+    
+        .form-status { margin-top: 16px; font-size: 15px; font-weight: 500; min-height: 1em; }
+        .form-status.ok { color: #1f7a3a; }
+        .form-status.err { color: #b42318; }
+        .form-privacy { margin-top: 14px; font-size: 12.5px; color: var(--gray-600); line-height: 1.6; }
+        .btn-submit[disabled] { opacity: .6; cursor: wait; }
     </style>
 </head>
 <body>
@@ -458,7 +464,7 @@
 
             <div class="contact-form">
                 <h2>Request a Quote</h2>
-                <form action="https://formspree.io/f/your-form-id" method="POST">
+                <form id="nam-inquiry" novalidate>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -485,19 +491,25 @@
                         <label for="project-type">Project Type</label>
                         <select id="project-type" name="project-type">
                             <option value="">Select an option</option>
-                            <option value="standard-containers">Standard Containers</option>
-                            <option value="modified-units">Modified Units</option>
-                            <option value="bulk-order">Bulk / Project Order</option>
+                            <option value="defense">Defense</option>
+                            <option value="data_center">Data center</option>
+                            <option value="oil_gas_energy">Oil, gas &amp; energy</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="housing">Workforce &amp; student housing</option>
+                            <option value="government">Government</option>
+                            <option value="retail_commercial">Retail &amp; commercial</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Project Details</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your project: container type, quantity, specifications needed, delivery location, and timeline."></textarea>
+                        <textarea id="message" name="message" placeholder="Tell us about your project: what you need, quantity, key specifications, delivery location, and target schedule."></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit">Submit Request</button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    <p class="form-privacy">Inquiries are managed in a CRM shared with our sister company, Bob's Containers. We use your details only to respond to your request.</p>
                 </form>
 
                 <div class="response-note">
@@ -518,5 +530,54 @@
             <a href="contact.html">Contact</a>
         </div>
     </footer>
+
+    <script>
+    (function () {
+        var form = document.getElementById('nam-inquiry');
+        var status = document.getElementById('form-status');
+        var btn = form.querySelector('.btn-submit');
+        var ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/submit/8688049/bd4cd5ec-c049-4c0d-b44a-54a02f7ec838';
+        function val(id) { return (document.getElementById(id).value || '').trim(); }
+        function cookie(n) { var m = document.cookie.match('(?:^|; )' + n + '=([^;]*)'); return m ? m[1] : undefined; }
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            status.className = 'form-status'; status.textContent = '';
+            var name = val('name'), email = val('email');
+            if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+                status.className = 'form-status err';
+                status.textContent = 'Please enter your name and a valid email address.';
+                return;
+            }
+            var parts = name.split(/\s+/), first = parts.shift(), last = parts.join(' ');
+            var fields = [
+                { name: 'firstname', value: first },
+                { name: 'lastname', value: last },
+                { name: 'email', value: email },
+                { name: 'phone', value: val('phone') },
+                { name: 'company', value: val('company') },
+                { name: 'nam_project_type', value: val('project-type') },
+                { name: 'message', value: val('message') }
+            ].filter(function (f) { return f.value; });
+            var context = { pageUri: location.href, pageName: document.title };
+            var hutk = cookie('hubspotutk'); if (hutk) context.hutk = hutk;
+            btn.disabled = true; btn.textContent = 'Sending...';
+            fetch(ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ fields: fields, context: context })
+            }).then(function (r) {
+                if (!r.ok) throw new Error(r.status);
+                form.reset();
+                status.className = 'form-status ok';
+                status.textContent = 'Thanks. The North American Modular team will follow up within one business day.';
+            }).catch(function () {
+                status.className = 'form-status err';
+                status.innerHTML = 'Something went wrong. Please email us at <a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a>.';
+            }).finally(function () {
+                btn.disabled = false; btn.textContent = 'Submit Request';
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
