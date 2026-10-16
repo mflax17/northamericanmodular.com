@@ -80,373 +80,56 @@
  ]
 }
     </script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --black: #0a0a0a;
-            --white: #ffffff;
-            --gray-100: #f5f5f5;
-            --gray-200: #e5e5e5;
-            --gray-400: #a3a3a3;
-            --gray-600: #525252;
-        }
-
-        body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--white);
-            color: var(--black);
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* Navigation */
-        nav {
-            padding: 32px 64px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .logo { display: inline-flex; align-items: center; }
-        .logo img { height: 44px; width: auto; display: block; }
-
-        .nav-links {
-            display: flex;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--gray-600);
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--black);
-        }
-
-        .nav-cta {
-            padding: 12px 24px;
-            background: var(--black);
-            color: var(--white) !important;
-            font-weight: 600;
-            font-size: 13px;
-        }
-
-        /* Page Header */
-        .page-header {
-            padding: 100px 64px 80px;
-            max-width: 700px;
-        }
-
-        .page-header h1 {
-            font-size: clamp(40px, 5vw, 56px);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-
-        .page-header p {
-            font-size: 18px;
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        /* Contact Content */
-        .contact-section {
-            padding: 0 64px 100px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            max-width: 1100px;
-        }
-
-        /* Contact Info */
-        .contact-info h2 {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 40px;
-        }
-
-        .info-block {
-            margin-bottom: 40px;
-        }
-
-        .info-label {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gray-400);
-            margin-bottom: 12px;
-        }
-
-        .info-value {
-            font-size: 16px;
-            color: var(--black);
-            line-height: 1.7;
-        }
-
-        .info-value a {
-            border-bottom: 1px solid var(--gray-200);
-            transition: border-color 0.2s;
-        }
-
-        .info-value a:hover {
-            border-color: var(--black);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            background: var(--gray-100);
-            padding: 48px;
-        }
-
-        .contact-form h2 {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 32px;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 16px;
-            font-family: inherit;
-            font-size: 15px;
-            border: 1px solid var(--gray-200);
-            background: var(--white);
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--black);
-        }
-
-        .form-group textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 18px;
-            background: var(--black);
-            color: var(--white);
-            font-family: inherit;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .btn-submit:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Response Time */
-        .response-note {
-            margin-top: 24px;
-            padding: 20px;
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-        }
-
-        .response-note p {
-            font-size: 14px;
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        .response-note strong {
-            color: var(--black);
-        }
-
-        /* Footer */
-        footer {
-            padding: 64px;
-            border-top: 1px solid var(--gray-200);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-left {
-            font-size: 13px;
-            color: var(--gray-600);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .footer-links a {
-            font-size: 13px;
-            color: var(--gray-600);
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--black);
-        }
-
-        /* Mobile */
-        @media (max-width: 1024px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 24px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .page-header {
-                padding: 60px 24px;
-            }
-
-            .contact-section {
-                padding: 0 24px 60px;
-            }
-
-            .contact-form {
-                padding: 32px 24px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            footer {
-                padding: 40px 24px;
-                flex-direction: column;
-                gap: 24px;
-                text-align: center;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 24px;
-            }
-        }
-    
-        .form-status { margin-top: 16px; font-size: 15px; font-weight: 500; min-height: 1em; }
-        .form-status.ok { color: #1f7a3a; }
-        .form-status.err { color: #b42318; }
-        .form-privacy { margin-top: 14px; font-size: 12.5px; color: var(--gray-600); line-height: 1.6; }
-        .btn-submit[disabled] { opacity: .6; cursor: wait; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo" aria-label="North American Modular home"><img src="NAMLogoDark.png" alt="North American Modular" width="640" height="167"></a>
-        <div class="nav-links">
+
+    <nav id="nav">
+        <a href="index.html" class="logo" aria-label="North American Modular home">
+            <img src="NAMWhiteLogo.png" alt="North American Modular">
+        </a>
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links">
             <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html" class="nav-cta active">Contact Us</a>
+            <a href="services.html">Capabilities</a>
+            <a href="contact.html" class="nav-cta">Contact Us</a>
         </div>
     </nav>
 
-    <section class="page-header">
-        <h1>Get in touch</h1>
-        <p>Tell us about your project. We'll respond with specifications, pricing, and delivery options within 48 hours.</p>
+    <section class="hero page-hero">
+        <img class="hero-video" src="vert-datacenter.jpg" alt="Steel modular enclosure in a fabrication shop" fetchpriority="high" style="object-position:center 55%">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Contact</p>
+            <h1>Tell us about your project</h1>
+            <p class="hero-text">Send your requirements, drawings, or solicitation. We review every inquiry within one business day and provide quotes within 48&ndash;72 hours of spec review.</p>
+        </div>
     </section>
 
-    <section class="contact-section">
+    <section class="section">
         <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                
-                <div class="info-block">
-                    <p class="info-label">Email</p>
-                    <p class="info-value">
-                        <a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a>
-                    </p>
+            <div class="contact-info rv">
+                <div class="ci">
+                    <p class="ci-k">Email</p>
+                    <p class="ci-v"><a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a></p>
                 </div>
-
-                <div class="info-block">
-                    <p class="info-label">Location</p>
-                    <p class="info-value">
-                        Austin, Texas<br>
-                        United States
-                    </p>
+                <div class="ci">
+                    <p class="ci-k">Location</p>
+                    <p class="ci-v">Austin, Texas<br>Delivering to project sites across the U.S.</p>
                 </div>
-
-                <div class="info-block">
-                    <p class="info-label">Hours</p>
-                    <p class="info-value">
-                        Monday – Friday<br>
-                        8:00 AM – 5:00 PM CT
-                    </p>
+                <div class="ci">
+                    <p class="ci-k">Hours</p>
+                    <p class="ci-v">Monday &ndash; Friday<br>8:00 AM &ndash; 5:00 PM CT</p>
                 </div>
-
-                <div class="info-block">
-                    <p class="info-label">Delivery</p>
-                    <p class="info-value">
-                        Buyer arranges transportation<br>
-                        We can recommend carriers
-                    </p>
+                <div class="ci">
+                    <p class="ci-k">Response</p>
+                    <p class="ci-v">Every inquiry reviewed within one business day. Quotes within 48&ndash;72 hours of spec review.</p>
                 </div>
             </div>
-
-            <div class="contact-form">
+            <div class="contact-form rv">
                 <h2>Request a Quote</h2>
                 <form id="nam-inquiry" novalidate>
                     <div class="form-row">
@@ -495,25 +178,9 @@
                     <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                     <p class="form-privacy">Inquiries are managed in a CRM shared with our sister company, Bob's Containers. We use your details only to respond to your request.</p>
                 </form>
-
-                <div class="response-note">
-                    <p><strong>Response time:</strong> We review all inquiries within one business day and provide detailed quotes within 48–72 hours.</p>
-                </div>
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="footer-left">
-            © 2025 North American Modular LLC. All rights reserved.
-        </div>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </footer>
 
     <script>
     (function () {
@@ -564,5 +231,19 @@
         });
     })();
     </script>
+
+    <footer>
+        <div class="footer-left">
+            &copy; 2026 North American Modular LLC. All rights reserved.
+        </div>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Capabilities</a>
+            <a href="contact.html">Contact</a>
+            <a href="mailto:contact@northamericanmodular.com">contact@northamericanmodular.com</a>
+        </div>
+    </footer>
+
+    <script src="site.js"></script>
 </body>
 </html>
